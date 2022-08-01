@@ -66,7 +66,7 @@ export default function CreatePokemon() {
             dispatch(postPokemon(input));
             dispatch(getPokemonByName(input.name));
             history.push("/pokemonaddedcards")
-            alert('Pokemon creado con éxito!')
+            // alert('Pokemon creado con éxito!')
         } else {
             
              alert('Por favor completa todos los campos...')

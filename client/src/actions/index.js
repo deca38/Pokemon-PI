@@ -26,11 +26,14 @@ export function postPokemon(payload){
     return async function(dispatch){
         try{
             await axios.post('/pokemons', payload);
+            alert('Pokemon creado con éxito!')
             return dispatch({
                 type: 'POST_POKEMON',
             })
+            
         } catch(error) {
-            console.log(error)
+            // console.log(error)
+            alert ('Ese pokemon ya existe')
         }
     }
 }

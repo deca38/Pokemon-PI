@@ -61,6 +61,14 @@ router.post('/', async (req, res) => {
     name, img, hp, attack, defense, speed, height, weight, types,
   } = req.body;
 
+ let exists = await Pokemon.findOne({
+     where: {name}
+ })
+ if (exists) {
+  return res.status(400).send('Ese pokemon ya existe...')
+
+ }
+
   const newPokemon = await Pokemon.create({
     name, img, hp, attack, defense, speed, height, weight,
   });
