@@ -1,9 +1,8 @@
 import axios from 'axios';
-// import Swal from "sweetalert2";
 
 export function getPokemons(){
     return async function(dispatch){
-        const pokemons = await axios.get('http://localhost:3001/pokemons');
+        const pokemons = await axios.get('/pokemons');
         // console.log('Action getPokemons (API + DB)--->', pokemons.data)
         return dispatch({
             type: 'GET_POKEMONS',
@@ -14,7 +13,7 @@ export function getPokemons(){
 
 export function getTypes(){
     return async function(dispatch){
-        const types = await axios.get('http://localhost:3001/types');
+        const types = await axios.get('/types');
         // console.log('Action getTypes (API o DB)--->', types.data)
         return dispatch({
             type: 'GET_TYPES',
@@ -26,7 +25,7 @@ export function getTypes(){
 export function postPokemon(payload){
     return async function(dispatch){
         try{
-            await axios.post('http://localhost:3001/pokemons', payload);
+            await axios.post('/pokemons', payload);
             return dispatch({
                 type: 'POST_POKEMON',
             })
@@ -68,7 +67,7 @@ export function filterByOrigin(payload){
 export function getPokemonByName(name){
     return async function(dispatch){
         try{
-            let pokemon = await axios.get('http://localhost:3001/pokemons?name=' + name);
+            let pokemon = await axios.get('/pokemons?name=' + name);
             return dispatch({
                 type: 'GET_POKEMON_BY_NAME',
                 payload: pokemon.data
@@ -84,7 +83,7 @@ export function getPokemonByName(name){
 export function getPokemonBySearchId(searchId){
     return async function(dispatch){
         try{
-            let pokemonById = await axios.get('http://localhost:3001/pokemons/' + searchId);
+            let pokemonById = await axios.get('/pokemons/' + searchId);
             return dispatch({
                 type: 'GET_POKEMON_BY_ID',
                 payload: pokemonById.data
@@ -100,7 +99,7 @@ export function getPokemonBySearchId(searchId){
 export function getDetails(id){
     return async function(dispatch){
         try{
-            let pokemon = await axios.get('http://localhost:3001/pokemons/' + id);
+            let pokemon = await axios.get('/pokemons/' + id);
             return dispatch({
                 type: 'GET_DETAILS',
                 payload: pokemon.data
