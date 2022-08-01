@@ -61,7 +61,7 @@ export default function CreatePokemon() {
     function handleSubmit(event){
         event.preventDefault();
         setInput({...input.name=input.name.toLowerCase()});
-        !input.img ? setInput({...input.img='https://images.wikidexcdn.net/mwuploads/wikidex/0/02/latest/20090125150654/Pok%C3%A9_Ball_%28Ilustraci%C3%B3n%29.png'}) : setInput(input);
+        !input.img ? setInput({...input.img='https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/769px-Pokebola-pokeball-png-0.png'}) : setInput(input);
         if(Object.keys(errors).length === 0 && input.name.length && input.types.length > 0) {
             dispatch(postPokemon(input));
             dispatch(getPokemonByName(input.name));
