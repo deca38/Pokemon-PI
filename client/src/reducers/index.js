@@ -127,26 +127,7 @@ function rootReducer (state=initialState, action) {
                 allPokemons: state.filteredPokemons,
                 addedPokemons: [],
             }
-        case 'REMOVE_CARD':
-            const newFilteredPokemons = state.filteredPokemons.filter(pokemon => pokemon.id !== action.payload)
-            if(newFilteredPokemons.length === state.filteredPokemons.length){
-                
-                 alert("Pokemon eliminado")
-            } else {
-                // Swal.fire({
-                //     title: 'Done',
-                //     text: 'Pokemon deleted!',
-                //     icon: 'info',
-                //     confirmButtonText: 'OK',
-                // })
-                 alert("Pokemon eliminado")
-            }
-            // console.log(action.payload,newFilteredPokemons, state)
-            return{
-                ...state,
-                filteredPokemons: newFilteredPokemons,
-                allPokemons: newFilteredPokemons
-            }
+        
         default: return state;
     }
 }

@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import s from "./CreatePokemon.module.css";
 import NavBar from "../NavBar/NavBar";
 import validations from "./CreatePokemonValidations";
-import Swal from "sweetalert2";
+
 
 export default function CreatePokemon() {
 
     const dispatch = useDispatch();
     const types = useSelector((state)=>state.types);
-    const pokemonNames = useSelector((state)=>state.allPokemons.map((pokemon)=>pokemon.name));
+    const pokemonNames = useSelector((state)=> state.allPokemons.map((pokemon)=>pokemon.name));
     const history = useHistory();
     const [errors, setErrors] = useState({});
     const [input, setInput] = useState({
@@ -65,8 +65,8 @@ export default function CreatePokemon() {
         if(Object.keys(errors).length === 0 && input.name.length && input.types.length > 0) {
             dispatch(postPokemon(input));
             dispatch(getPokemonByName(input.name));
-            history.push("/pokemonaddedcards")
-            // alert('Pokemon creado con éxito!')
+            history.push("/pokemon")
+            //alert('Pokemon creado con éxito!')
         } else {
             
              alert('Por favor completa todos los campos...')
