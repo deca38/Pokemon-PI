@@ -1,4 +1,12 @@
+
 .App {
+ 
+  text-align: center;
+  color: rgb(27, 50, 62);
+  height: 97vh;
+  
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

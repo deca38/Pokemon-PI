@@ -1,0 +1,50 @@
+.card{
+    width: 15rem;
+    height: 21rem;
+    margin: 1.15rem;
+    border: 0.05rem solid #b2b8ad;
+    border-radius: 4%;
+    background-color: rgba(45, 76, 175, 0.5);
+    backdrop-filter: blur(0.25rem) grayscale(75%);
+}
+
+.card:hover{
+    background-color: rgba(97, 122, 204, 0.637);
+}
+
+
+.cardImg{
+    margin-top: 12px;
+    height: 80%;
+    width: 80%;
+}
+
+.cardName{
+    margin-top: 0;
+    color:#000000;
+}
+
+.containerCardTypes{
+    margin-top: -1.25rem;
+    color: #ffffff;
+}
+
+/* .cardWater{
+    
+    background-color: rgba(53, 53, 235, 0.479);
+    
+} */
+
+.cardTypes{
+    display: inline-block;
+    margin-top: 1.2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0.3rem;
+    border-radius: 12%;
+    color: #ffffff;
+    background-color: rgba(27, 28, 29, 0.5);
+    width: 5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

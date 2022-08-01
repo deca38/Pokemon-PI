@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.navbarLink {
+	width: 3rem;
+	height: 3rem;
+	display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.1rem;
+	font-weight:bold;
+	padding: 1rem;
+	align-items: center;
+	justify-content:center;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #000000;
+	margin-right: 20px;
+}
+.navbarLink:hover {
+	width: 3rem;
+	height: 1.4rem;
+	background-color: rgba(97, 122, 204, 0.637);
+	border-radius: 10px;
+}
+.navbarLink:active {
+	position:relative;
+	top:1px;
+}
+
+  
+

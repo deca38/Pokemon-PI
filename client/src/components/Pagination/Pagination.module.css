@@ -1,0 +1,48 @@
+
+.prevBtn{
+    display: inline-block;
+    position: absolute;
+    margin-left: -7.8rem;
+	margin-top: 1rem;
+}
+
+.pageOf{
+    display: inline-block;
+    position: sticky;
+	margin-top: 1rem;
+}
+
+.nextBtn{
+    display: inline-block;
+    position: absolute;
+    margin-left: 1.3rem;
+	margin-top: 1rem;
+}
+
+.pages{
+    display: inline-block;
+    margin: 5px;
+}
+
+.pagesBtn {
+	
+	background-color:#C1C3BC90;
+	border-radius:6px;
+	border:1px solid #86bbff;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.pagesBtn:hover {
+	background-color: rgba(97, 122, 204, 0.637);
+}
+.pagesBtn:active {
+	position:relative;
+	top:1px;
+}
+

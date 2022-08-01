@@ -1,0 +1,73 @@
+.landingPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 103.1%;
+	width: 100%;
+	background-image: url("../../img/bg-landing.jpg");
+    background-size: cover;
+	background-position: center;
+    
+}
+
+.loadingApp{
+    font-size: 1.6rem;
+    color: rgb(240, 240, 240);
+	text-shadow: 3px  0px 0px black,
+				 0px  3px 0px black,
+              	-3px  0px 0px black,
+                 0px -3px 0px black;
+	
+}
+
+
+.landingBtn {
+    cursor: pointer;
+	text-decoration:none;
+	box-shadow:inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 3px 2px;
+	background:rgba(255, 255, 255, 0.2);
+	text-indent:0px;
+	line-height:2rem;
+	border-radius:50%;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:3.6rem;
+	color:rgba(255, 255, 255, 0.5);
+	width:15rem;
+	height:15rem;
+	padding:1rem;
+	border-color:#5a5c5cb9;
+	border-width:0.12rem;
+	border-style:solid;
+	animation-name: bounceInDown;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	background-image: url("../../img/go-landing.png");
+    background-size: 11rem;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.landingBtn:active {
+	box-shadow:inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 0 2px;
+	box-shadow:inset #ffffff 0px 5px 8px -1px,#d6d6d6 1px 0 2px;
+	position:relative;
+	top:0.3rem;
+	background-image: url("../../img/go-landing.png");
+    background-size: 11rem;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.landingBtn:hover {
+	background:rgba(255, 255, 255, 0.8);
+	background-image: url("../../img/go-landing.png");
+    background-size: 11.8rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.9;
+	color:rgba(255, 255, 255, 0.7);
+	font-size:4.2rem;
+}
