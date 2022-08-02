@@ -1,7 +1,7 @@
 export default function validations(input, pokemonNames) {
     let errors = [];
     let RegExpression = /^[a-zA-Z\s]*$/;
-    console.log(pokemonNames)
+    
     if(!input.name) {
         errors.name = 'El nombre es requerido...'
     } else if(pokemonNames.includes(input.name)) {

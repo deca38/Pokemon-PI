@@ -127,7 +127,20 @@ function rootReducer (state=initialState, action) {
                 allPokemons: state.filteredPokemons,
                 addedPokemons: [],
             }
-        
+            case 'REMOVE_CARD':
+                const newFilteredPokemons = state.filteredPokemons.filter(pokemon => pokemon.id !== action.payload)
+                if(newFilteredPokemons.length === state.filteredPokemons.length){
+                    
+                     alert("Pokemon eliminado")
+                } else {
+                    
+                     alert("Pokemon eliminado")
+                }
+                return{
+                    ...state,
+                    filteredPokemons: newFilteredPokemons,
+                    allPokemons: newFilteredPokemons
+                }
         default: return state;
     }
 }

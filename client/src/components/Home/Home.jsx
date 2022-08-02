@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPokemons, getTypes, removeDetails, orderByName, orderByStrength, filterByOrigin, filterByType } from "../../actions/index";
 import { Link } from "react-router-dom";
 import s from "./Home.module.css";
-// import loading from '../../img/loading.gif'
 import NavBar from "../NavBar/NavBar";
 import SearchBar from "../SearchBar/SearchBar";
 import Card from "../Card/Card";

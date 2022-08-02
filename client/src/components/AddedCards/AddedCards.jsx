@@ -13,7 +13,7 @@ export default function AddedCards() {
     const allPokemons = useSelector((state)=>state.allPokemons);
     const addedPokemons = useSelector((state)=>state.addedPokemons);
 
-    const [loadedPokemons /*, setLoadedPokemons*/] = useState(allPokemons.length ? true : false);
+    const [loadedPokemons ] = useState(allPokemons.length ? true : false);
 
     useEffect(()=>{
         dispatch(removeDetails());
@@ -29,6 +29,8 @@ export default function AddedCards() {
         history.push('/pokemon')
         
     }
+
+    
 
     return(
         <div className={sd.details}>
@@ -55,7 +57,7 @@ export default function AddedCards() {
                             <span>Height: {pokemon.height}</span>
                             <span>Weight: {pokemon.weight}</span>
                             </div>
-                            <button className={sd.removeBtn} id={pokemon.id} onClick={handleClick}>Eliminar</button>                    
+                            <button className={sd.removeBtn} id={pokemon.id} onClick={handleClick}>Eliminar</button>  
                             <Link className={sd.backBtn} to='/pokemon'>Atrás</Link>
                         </div>)
                 }) :

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDetails } from '../../actions/index';
+import { getDetails, removeCard } from '../../actions/index';
 import NavBar from "../NavBar/NavBar";
 import SearchBar from '../SearchBar/SearchBar';
 import s from './Detail.module.css';
@@ -16,6 +16,13 @@ export default function Details() {
     }, [dispatch, id])
 
     const myPokemon = useSelector((state) => state.details);
+
+    function handleClick(event){
+        event.preventDefault();
+        dispatch(removeCard(event.target.id));
+        history.push('/pokemon')
+       
+    }
 
 
     return(
@@ -42,6 +49,7 @@ export default function Details() {
                     <span>Height: {myPokemon[0].height}</span>
                     <span>Weight: {myPokemon[0].weight}</span>
                     </div>
+                    <button className={s.removeBtn} id={myPokemon[0].id} onClick={handleClick}>Eliminar</button>
                     <Link className={s.backBtn} to='/pokemon'>Volver</Link>
                 </div>
                 :

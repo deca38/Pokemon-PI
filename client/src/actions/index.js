@@ -113,6 +113,7 @@ export function getDetails(id){
     }
 }
 
+
 export function removeDetails(){
     return{
         type: 'REMOVE_DETAILS',
@@ -131,3 +132,5 @@ export function removeCard(payload){
         payload
     }
 }
+
+
