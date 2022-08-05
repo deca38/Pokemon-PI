@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   const { name } = req.query;
-
+  // console.log(name)
   if (!name) {
     const totalPokemons = await getAllPokemons();
     totalPokemons ? res.status(200).json(totalPokemons) : res.status(404).json('No se encontraron Pokemons...');

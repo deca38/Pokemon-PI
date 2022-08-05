@@ -1,4 +1,4 @@
-// import Swal from "sweetalert2";
+
 
 const initialState = {
     allPokemons: [],
@@ -76,6 +76,7 @@ function rootReducer (state=initialState, action) {
                 ...state,
                 allPokemons: filteredTypes
             }
+ 
         case 'FILTER_BY_ORIGIN':
             const pokemonsByOrigin= state.filteredPokemons;
             const filteredOrigin = action.payload === 'created by User' ?
@@ -131,10 +132,10 @@ function rootReducer (state=initialState, action) {
                 const newFilteredPokemons = state.filteredPokemons.filter(pokemon => pokemon.id !== action.payload)
                 if(newFilteredPokemons.length === state.filteredPokemons.length){
                     
-                     alert("Pokemon eliminado")
+                     alert("No se puede eliminar un pokemon original...")
                 } else {
                     
-                     alert("Pokemon eliminado")
+                     alert("Pokemon eliminado con éxito!")
                 }
                 return{
                     ...state,

@@ -8,7 +8,7 @@ export default function LandingPage(){
 
     const dispatch = useDispatch();
     const allPokemons = useSelector((state)=>state.allPokemons);
-    const [loadedPokemons /*, setLoadedPokemons*/] = useState(allPokemons.length ? true : false);
+    const [loadedPokemons ] = useState(allPokemons.length ? true : false);
 
     useEffect(() =>{
         dispatch(restore())

@@ -10,11 +10,13 @@ export default function NavBar() {
     function handleClick () {
         dispatch(restore())
     }
-
+   
     return (
         <nav className={s.navbar}>
             <NavLink to="/pokemon" className={s.navbarLink} onClick={handleClick}>INICIO</NavLink>
             <NavLink to="/" className={s.navbarLink}>VOLVER</NavLink>
         </nav>
+
     )
 }
+    

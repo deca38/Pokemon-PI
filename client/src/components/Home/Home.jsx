@@ -13,9 +13,9 @@ export default function Home() {
     const allPokemons = useSelector((state)=>state.allPokemons);
     const types = useSelector((state)=>state.types);
 
-    const [loadedPokemons /*, setLoadedPokemons*/] = useState(allPokemons.length ? true : false);
+    const [loadedPokemons ] = useState(allPokemons.length ? true : false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonPage /*, setPokemonPage*/] = useState(12);
+    const [pokemonPage ] = useState(12);
     const indexLast = currentPage * pokemonPage;
     const indexFirst = indexLast - pokemonPage;
     const currentPokemons = allPokemons.slice(indexFirst, indexLast);
@@ -59,6 +59,10 @@ export default function Home() {
         e.target.value= 'default';
     }
 
+   
+
+
+
     function handleFilterByOrigin(e){
         e.preventDefault();
         dispatch(filterByOrigin(e.target.value));
@@ -72,12 +76,12 @@ export default function Home() {
             <SearchBar/>
             <form className={s.filters}>
                 <select className={s.homeFilters} value='default' onChange={e => handleSort(e)}>
-                    <option disabled value = "default">Odernar por nombre...</option>
+                    <option disabled value = "default">Ordenar por nombre...</option>
                     <option value = "asc">A - Z</option>
                     <option value = "desc">Z - A</option>
                 </select>
                 <select className={s.homeFilters} value='default' onChange={e => handleSortAttack(e)}>
-                    <option disabled value = "default">Odernar por fuerza...</option>
+                    <option disabled value = "default">Ordenar por fuerza...</option>
                     <option value = "strongest">Mayor ataque</option>
                     <option value = "weakest">Menor ataque</option>
                 </select>
@@ -88,6 +92,11 @@ export default function Home() {
                     <option value = {type.name} key={type.name}>{type.name.charAt(0).toUpperCase()+type.name.slice(1)}</option>
                     ))}
                 </select>
+
+
+                
+
+
                 <select className={s.homeFilters} value='default' onChange={e => handleFilterByOrigin(e)}>
                     <option disabled value = "default">Filtrar por origen...</option>
                     <option value = "all">Mostrar todos...</option>
